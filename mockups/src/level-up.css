@@ -1,0 +1,90 @@
+
+/* ===== LEVEL UP PAGE ===== */
+.lu-page .trial-card::before{content:'FIRST CLASS IS FREE';}
+.lu-page .hero-image img{position:absolute;inset:0;object-position:center 40%;}
+/* The teen photo is a tall portrait: keep it portrait-shaped at every width so it never crops to a strip */
+@media(max-width:719px){.lu-page .hero-image{height:auto;aspect-ratio:654/850;width:100%;max-width:440px;margin:0 auto;}}
+@media(min-width:720px){
+  .lu-page .hero-grid{grid-template-columns:1.25fr .75fr;gap:40px;padding:24px 0 36px;}
+  .lu-page .hero-content{order:1;}
+  .lu-page .hero-image{order:2;height:auto;min-height:0;aspect-ratio:654/850;align-self:center;}
+}
+.lu-when{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 18px;}
+.lu-when div{background:var(--cream);border:1px solid var(--gray-light);border-radius:12px;padding:12px 14px;}
+.lu-when small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:2px;}
+.lu-when strong{font-family:'Archivo Black',sans-serif;font-size:20px;color:var(--ink);letter-spacing:-0.01em;}
+
+/* Who it's for */
+.lu-who{padding:70px 0 40px;}
+.lu-who-grid{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;}
+@media(min-width:900px){.lu-who-grid{grid-template-columns:1fr 1fr;gap:56px;}}
+.lu-quote{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4vw,42px);line-height:1.02;letter-spacing:-0.02em;color:var(--ink);text-transform:uppercase;}
+.lu-answer{font-family:'Archivo Black',sans-serif;font-size:clamp(42px,5.6vw,68px);line-height:.88;letter-spacing:-0.02em;text-transform:uppercase;margin-top:14px;color:var(--ink);}
+.lu-answer span{position:relative;display:inline-block;z-index:1;}
+.lu-answer span::before{content:'';position:absolute;inset:auto -4px 6%;height:36%;background:var(--yellow);z-index:-1;transform:skewX(-4deg);}
+.lu-list-card{background:#fff;border:1px solid var(--gray-light);border-radius:22px;padding:30px 28px;}
+.lu-list-card h3{font-family:'Archivo Black',sans-serif;font-size:20px;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:10px;}
+.lu-list-card h3 span{background:var(--yellow);padding:0 6px;border-radius:4px;}
+.lu-dots{list-style:none;}
+.lu-dots li{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--cream-deep);font-size:16px;font-weight:600;color:var(--ink);}
+.lu-dots li:last-child{border-bottom:none;}
+.lu-dots li::before{content:'';width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:1.5px 1.5px 0 var(--ink);flex-shrink:0;}
+.lu-note{margin-top:18px;padding-top:16px;border-top:3px solid var(--yellow);font-weight:700;font-size:16px;color:var(--ink);}
+
+/* Class */
+.lu-class{padding:50px 0 30px;}
+.lu-class .section-title{margin-bottom:16px;}
+.lu-class-sub{text-align:center;color:var(--gray);font-weight:500;font-size:16px;margin:0 auto 36px;max-width:520px;}
+.lu-class-sub strong{color:var(--ink);}
+.lu-tiles{display:grid;grid-template-columns:1fr;gap:16px;}
+@media(min-width:600px){.lu-tiles{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:1000px){.lu-tiles{grid-template-columns:repeat(4,1fr);}}
+.lu-tile{background:#fff;border:1px solid var(--gray-light);border-radius:20px;padding:26px 22px;position:relative;transition:transform .3s,box-shadow .3s;}
+.lu-tile:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(22,22,22,.2);}
+.lu-tile .feature-num{position:static;margin-bottom:16px;}
+.lu-tile h3{font-family:'Archivo Black',sans-serif;font-size:19px;line-height:1.1;text-transform:uppercase;letter-spacing:-0.01em;margin-bottom:8px;}
+.lu-tile p{font-size:14px;color:var(--gray);line-height:1.5;}
+.lu-strip{margin-top:22px;background:var(--yellow);border-radius:18px;padding:22px 26px;display:flex;flex-wrap:wrap;gap:6px 26px;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(15px,2vw,19px);letter-spacing:.01em;color:var(--ink);box-shadow:4px 4px 0 var(--ink);text-align:center;}
+.lu-strip s{text-decoration:none;opacity:.55;}
+
+/* Safety */
+.lu-safety{padding:50px 0;}
+.lu-safe-card{background:var(--ink);color:var(--cream);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr;}
+.lu-safe-img{position:relative;aspect-ratio:2.15/1;min-height:220px;max-height:440px;}
+.lu-safe-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.lu-safe-body{padding:36px 28px;}
+@media(min-width:900px){.lu-safe-body{padding:44px 50px 46px;display:grid;grid-template-columns:auto 1fr;gap:0 56px;align-items:start;}.lu-safe-body p{grid-column:2;}.lu-safe-list{grid-column:2;grid-row:1 / span 2;}.lu-safe-q,.lu-safe-a{grid-column:1;}}
+.lu-safe-q{color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px;}
+.lu-safe-a{font-family:'Archivo Black',sans-serif;font-size:clamp(46px,7vw,76px);line-height:.9;letter-spacing:-0.02em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;}
+.lu-safe-list{list-style:none;margin-bottom:20px;}
+.lu-safe-list li{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #555;font-weight:700;font-size:16px;}
+.lu-safe-list li:last-child{border-bottom:none;}
+.lu-safe-list .ic{width:26px;height:26px;border-radius:50%;background:var(--yellow);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0;}
+.lu-safe-body p{font-size:14px;color:var(--gray-light);line-height:1.6;}
+
+/* Gains */
+.lu-gain{padding:30px 0 40px;}
+.lu-gain-card{background:var(--yellow-light);border:1.5px solid var(--yellow-deep);border-radius:24px;padding:40px 28px 34px;}
+@media(min-width:700px){.lu-gain-card{padding:48px 46px 40px;}}
+.lu-checks{list-style:none;display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 26px;}
+@media(min-width:600px){.lu-checks{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.lu-checks{grid-template-columns:repeat(3,1fr);}}
+.lu-checks li{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:16px 16px;display:flex;align-items:center;gap:12px;font-weight:700;font-size:16px;color:var(--ink);}
+.lu-checks li::before{content:'\2713';width:26px;height:26px;border-radius:7px;background:var(--ink);color:var(--yellow);display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex-shrink:0;}
+.lu-gain-close{font-weight:600;font-size:16px;color:var(--ink-soft);}
+.lu-gain-close strong{display:block;font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.4vw,34px);text-transform:uppercase;letter-spacing:-0.01em;color:var(--ink);line-height:1.05;margin-top:6px;}
+.lu-gain-close strong span{background:var(--ink);color:var(--yellow);padding:0 10px;border-radius:6px;}
+
+/* Beginners */
+.lu-new{padding:40px 0 40px;}
+.lu-new-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;}
+@media(min-width:900px){.lu-new-grid{grid-template-columns:1fr 1fr;gap:56px;}}
+.lu-new-img{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(22,22,22,.35);aspect-ratio:714/680;}
+.lu-new-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.lu-new p:not(.lu-answer){font-size:16px;color:var(--ink-soft);font-weight:500;line-height:1.6;margin-bottom:12px;max-width:460px;}
+.lu-badge{display:inline-flex;align-items:center;gap:10px;margin-top:10px;background:var(--ink);color:var(--cream);padding:10px 18px 10px 10px;border-radius:100px;font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:.04em;text-transform:uppercase;}
+.lu-badge i{width:28px;height:28px;border-radius:50%;background:var(--yellow);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:13px;}
+
+/* Mockup-only placeholder for info we still need */
+.lu-todo{background:#FFF8DA;border:1.5px dashed var(--yellow-deep);border-radius:6px;padding:1px 6px;font-weight:700;color:#8A6500;}
+@media(max-width:480px){.lu-page .btn-primary{font-size:13px;letter-spacing:.03em;padding:16px 14px;}}
