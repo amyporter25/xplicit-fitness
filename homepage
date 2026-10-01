@@ -480,7 +480,7 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600;}
       <div class="plan-name">Champion+</div>
       <div class="plan-price">$189<span>/4 weeks</span></div>
       <ul class="plan-perks"><li>Unlimited classes</li><li>Community events</li><li>Guest passes</li><li>Rewards program</li><li>10% off retail</li><li>Power Calls</li><li>Nutrition Coaching</li></ul>
-      <div class="plan-terms"><span class="lim">Limited Time Offer*</span><br><span class="strike">6 mo</span><span class="now">no commitment</span><br><span class="strike">$79</span><span class="now">$0 enrollment</span></div>
+      <div class="plan-terms"><span class="lim">Limited Time Offer*</span><br><span class="strike">12 mo</span><span class="now">6 mo commitment</span><br><span class="strike">$79</span><span class="now">$0 enrollment</span></div>
       <p class="plan-disclaimer">*Limited-time offer, valid for new clients on their first in-person class at our studio.</p>
       <a class="plan-btn" href="https://share.fitdegree.com/?share=66881483a9cc9">Join Now</a>
     </div>
