@@ -14,9 +14,13 @@
         <li class="lu-chip"><b>Sundays</b> 9:00a &amp; 10:00a</li>
         <li class="lu-chip lu-chip-hot">First class free</li>
       </ul>
-      <a class="lu-btn" href="level-up.html">Explore Teen Boxing <span class="arrow">&rarr;</span></a>
+      <a class="lu-btn" id="luExplore" href="level-up.html">Explore Teen Boxing <span class="arrow">&rarr;</span></a>
       <p class="lu-alt">Or text <a href="sms:+16198318726?&amp;body=LEVEL%20UP">&ldquo;LEVEL UP&rdquo; to (619) 831-8726</a></p>
     </div>
   </div>
 </div></section>
+<script>
+/* Go to the teens page on the first tap, before anything else on the page can intercept the click */
+(function(){var b=document.getElementById('luExplore');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.location.href=b.href;},true);}})();
+</script>
 

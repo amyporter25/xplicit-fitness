@@ -29,3 +29,6 @@
 .lu-alt a{color:var(--yellow);font-weight:700;text-decoration:none;}
 .lu-alt a:hover{text-decoration:underline;}
 @media(max-width:480px){.lu-btn{font-size:13px;padding:16px 22px;letter-spacing:.04em;}}
+/* Touch screens: no hover lift, so iOS doesn't spend the first tap on the hover state */
+@media(hover:none){.lu-btn:hover{transform:none;box-shadow:4px 4px 0 var(--cream);}.lu-btn:hover .arrow{transform:none;}}
+.lu-btn{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}

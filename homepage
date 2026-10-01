@@ -12,7 +12,7 @@
 <div id="xpl">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --cream:#FAF6EE; --cream-deep:#F2EBDB; --yellow:#FFC107; --yellow-light:#FFF3C4;
@@ -253,6 +253,9 @@ details[open] .schedule-toggle{transform:rotate(45deg);}
 .plan-perks li::before{content:'\2022';color:var(--gray);font-weight:900;font-size:18px;line-height:1;flex-shrink:0;}
 .plan.featured .plan-perks li::before{content:'\2713';width:20px;height:20px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1;margin-top:1px;}
 .plan-terms{font-size:12px;color:var(--gray);font-weight:600;margin-bottom:16px;line-height:1.7;}
+.plan-terms-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;}
+.plan-terms-row .plan-terms{margin-bottom:0;white-space:nowrap;flex-shrink:0;}
+.plan-guarantee{font-family:'Caveat',cursive;font-weight:700;color:var(--red);font-size:clamp(20px,5.6vw,25px);line-height:.95;text-align:center;transform:rotate(-4deg);}
 .plan-terms .lim{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:6px;line-height:1.3;}
 .plan-disclaimer{font-size:10px;line-height:1.45;color:var(--gray);font-weight:500;margin:8px 0 14px;text-align:left;}
 .plan-terms .strike{color:var(--gray);text-decoration:line-through;font-weight:600;margin-right:5px;}
@@ -387,6 +390,9 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600;}
 .lu-alt a{color:var(--yellow);font-weight:700;text-decoration:none;}
 .lu-alt a:hover{text-decoration:underline;}
 @media(max-width:480px){.lu-btn{font-size:13px;padding:16px 22px;letter-spacing:.04em;}}
+/* Touch screens: no hover lift, so iOS doesn't spend the first tap on the hover state */
+@media(hover:none){.lu-btn:hover{transform:none;box-shadow:4px 4px 0 var(--cream);}.lu-btn:hover .arrow{transform:none;}}
+.lu-btn{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 /* TEEN-SECTION-END */
 </style>
 
@@ -528,7 +534,7 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600;}
       <div class="plan-name">Champion+</div>
       <div class="plan-price">$189<span>/4 weeks</span></div>
       <ul class="plan-perks"><li>Unlimited classes</li><li>Community events</li><li>Guest passes</li><li>Rewards program</li><li>10% off retail</li><li>Power Calls</li><li>Nutrition Coaching</li></ul>
-      <div class="plan-terms"><span class="lim">Limited Time Offer*</span><br><span class="strike">12 mo</span><span class="now">6 mo commitment</span><br><span class="strike">$79</span><span class="now">$0 enrollment</span></div>
+      <div class="plan-terms-row"><div class="plan-terms"><span class="lim">Limited Time Offer*</span><br><span class="strike">12 mo</span><span class="now">6 mo commitment</span><br><span class="strike">$79</span><span class="now">$0 enrollment</span></div><p class="plan-guarantee">30 day money<br>back guarantee!</p></div>
       <p class="plan-disclaimer">*Limited-time offer, valid for new clients on their first in-person class at our studio.</p>
       <a class="plan-btn" href="https://share.fitdegree.com/?share=66881483a9cc9">Join Now</a>
     </div>
@@ -562,11 +568,15 @@ footer a{color:var(--yellow);text-decoration:none;font-weight:600;}
         <li class="lu-chip"><b>Sundays</b> 9:00a &amp; 10:00a</li>
         <li class="lu-chip lu-chip-hot">First class free</li>
       </ul>
-      <a class="lu-btn" href="/teens">Explore Teen Boxing <span class="arrow">&rarr;</span></a>
+      <a class="lu-btn" id="luExplore" href="/teens">Explore Teen Boxing <span class="arrow">&rarr;</span></a>
       <p class="lu-alt">Or text <a href="sms:+16198318726?&amp;body=LEVEL%20UP">&ldquo;LEVEL UP&rdquo; to (619) 831-8726</a></p>
     </div>
   </div>
 </div></section>
+<script>
+/* Go to the teens page on the first tap, before anything else on the page can intercept the click */
+(function(){var b=document.getElementById('luExplore');if(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();window.location.href=b.href;},true);}})();
+</script>
 
 <!-- TEEN-SECTION-END -->
 
